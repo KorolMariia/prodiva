@@ -66,10 +66,23 @@
     left: 0;
     background-color: var(--primary-color);
     border-radius: 1rem;
-    padding: 4rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     list-style-image: url(../images/header__list.svg);
+}
+
+.header__item {
+    padding: 2.5rem 16rem 2.5rem 4rem;
+    border-bottom: 0.1rem solid var(--third-color);
+    white-space: nowrap;
+}
+
+.header__item:last-child {
+    border-bottom: none;
+}
+
+.header__item a:hover {
+    color: var(--accent-color);
 }
 
 .header__lang-select {

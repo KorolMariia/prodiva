@@ -1,4 +1,7 @@
+
+
 // Header nav products
+let timeoutId;
 const headerProductsWrapper = document.querySelector('.header__products--wrapper');
 const headerNav = document.querySelector('.header__list');
 
@@ -7,12 +10,19 @@ const showHeaderNav = () => {
 }
 
 const hideHeaderNav = () => {
-  headerNav.style.display = 'none';
+  timeoutId = setTimeout(function () {
+    headerNav.style.display = 'none';
+  }, 200);
+}
+
+const clearHideMenuTimeout = () => {
+  clearTimeout(timeoutId);
 }
 
 headerProductsWrapper.addEventListener('mouseover', showHeaderNav);
-headerProductsWrapper.addEventListener('mouseout', hideHeaderNav);
-
+headerProductsWrapper.addEventListener('mouseleave', hideHeaderNav);
+headerNav.addEventListener('mouseover', clearHideMenuTimeout);
+headerNav.addEventListener('mouseleave', hideHeaderNav);
 
 // Languages select
 document.addEventListener("DOMContentLoaded", function () {
