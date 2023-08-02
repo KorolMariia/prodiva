@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Prodiva</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="header primary-color">
+            <div class="container">
+                <div class="header__wrapper flex justify-between align-center">
+                    <div class="header__action flex align-center">
+                        <div class="header__products--wrapper flex align-center">
+                            <div class="header__burger-menu">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="text-uppercase">Продукция</div>
+                            <ul class="header__list secondary-color">
+                                <li class="header__item font-400 text-uppercase">
+                                    <a href="#" class="secondary-color">
+                                        <span>
+                                            Профессиональная линия
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="header__item font-400 text-uppercase">
+                                    <a href="#" class="secondary-color">
+                                        <span>
+                                            БОТОКС
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="header__item font-400 text-uppercase">
+                                    <a href="#" class="secondary-color">
+                                        <span>
+                                            КЕРАТИН
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="header__item font-400 text-uppercase">
+                                    <a href="#" class="secondary-color">
+                                        <span>
+                                            ШАМПУНЬ
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="header__item font-400 text-uppercase">
+                                    <a href="#" class="secondary-color">
+                                        <span>
+                                            СТАЙЛИНГ
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="header__item font-400 text-uppercase">
+                                    <a href="#" class="secondary-color">
+                                        <span>
+                                            ПРИКОРНЕВОЙ ОБЪЕМ И АНТИХИМИЯ
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__lang-select">
+                            <div class="header__lang-select--wrapper flex">
+                                <div class="header__selected-language  primary-color">
+                                </div>
+                                <img src="images/header__vector.svg" alt="" loading />
+                            </div>
+                            <ul class="header__language-options secondary-color text-uppercase">
+                                <li class="header__language-option" data-lang="ru">ru</li>
+                                <li class="header__language-option" data-lang="en">en</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header__logo">
+                        <img src="images/header__logo.png" alt="" loading />
+                    </div>
+                    <div class="header__contact">
+                        <a class="header__phone" href="tel:+7(495)1182024" target="blank" rel="noopener noreferrer">+7
+                            495 118-20-24</a>
+                        <button class="header__search">
+                            <img src="images/header__search.png" alt="" loading />
+                        </button>
+                        <button class="header__account">
+                            <img src="images/header__account.png" alt="" loading />
+                        </button>
+                        <button class="header__cart">
+                            <img src="images/header__cart.png" alt="" loading />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class='hero__slider'>
+                <nav>
+
+                </nav>
+            </div>
+        </section>
+
+        <main>
+            <section class="products" id="products">
+                <div class="container">
+                    <div class="products__title h2 text-uppercase">Профессиональная <br /> продукция</div>
+                    <ul class="products__list">
+                        <li class="products__items flex justify-between">
+                            <a class="products__link flex" href="#">
+                                <span class="products__image">
+                                    <img src="images/products__item1.png" alt="" loading />
+                                </span>
+                                <span class="products__subtitle h6 font-700 text-center secondary-color">Питательные
+                                    <br />
+                                    концентраты</span>
+                            </a>
+                            <a class="products__link flex" href="#">
+                                <span class="products__image">
+                                    <img src="images/products__item2.png" alt="" loading />
+                                </span>
+                                <span class="products__subtitle h6 font-700 text-center secondary-color">Лечение
+                                    и восстановление волос</span>
+                            </a>
+                            <div class="products__link--empty"></div>
+                            <a class="products__link flex products__shadow" href="#"
+                                style="background-image: url('images/products__item4.png'); background-size: cover; background-position: center; object-fit: cover;">
+                                <span class="products__subtitle h6 font-700 text-center primary-color">Лечение
+                                    и восстановление волос</span>
+                            </a>
+                        </li>
+                        <li class="products__items products__items--2 flex">
+                            <a class="products__link flex products__shadow" href="#"
+                                style="background-image: url('images/products__item5.png'); background-size: cover; background-position: center; object-fit: cover;">
+                                <span class="products__subtitle h6 font-700 text-center primary-color">Ботокс</span>
+                            </a>
+                            <div class="products__item flex">
+                                <div class="products__link--empty"></div>
+                                <a class="products__link flex" href="#">
+                                    <span class="products__image">
+                                        <img src="images/products__item7.png" alt="" loading />
+                                    </span>
+                                    <span class="products__subtitle h6 font-700 text-center secondary-color">Шампуни
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="products__items flex">
+                            <a class="products__link flex products__shadow" href="#"
+                                style="background-image: url('images/products__item8.png'); background-size: cover; background-position: center; object-fit: cover;">
+                                <span class="products__subtitle h6 font-700 text-center primary-color">Стайлинги</span>
+                            </a>
+                            <div class="products__link--empty"></div>
+                            <a class="products__link flex products__shadow" href="#"
+                                style="background-image: url('images/products__item9.png'); background-size: cover; background-position: center; object-fit: cover;">
+                                <span class="products__subtitle h6 font-700 text-center primary-color">Кератин</span>
+                            </a>
+                            <a class="products__link flex" href="#">
+                                <span class="products__image">
+                                    <img src="images/products__item10.png" alt="" loading />
+                                </span>
+                                <span class="products__subtitle h6 font-700 text-center secondary-color">Полуперманетное
+                                    окрашивание
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="homecare" id="homecare">
+                <div class="homecare__slider">
+                    <div class="homecare__slide">
+                        <div class="container">
+                            <div class="homecare__header flex justify-between align-center">
+                                <div class="homecare__title h2 text-uppercase primary-color">Домашний <br /> уход</div>
+                                <button class="btn">Смотреть все</button>
+                            </div>
+                            <div class="homecare__card flex">
+                                <a class="homecare__link secondary-color" href="#">
+                                    <span class="homecare__content flex">
+                                        <span>
+                                            <img src="images/homecare__card1.png" alt="" loading />
+                                        </span>
+                                        <span class="homecare__details">
+                                            <span class='homecare__detail'>
+                                                <img src="images/hits__icon.svg" alt="" loading />
+                                                <span class="text-uppercase">Подробнее</span>
+                                            </span>
+                                            <span class='homecare__detail font-700 accent-color text-center'>
+                                                200
+                                                <sup class="homecare__detail--sup">мл</sup>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="homecare__desc flex justify-between">
+                                        <span class="homecare__subtitle h6 text-left">Детокс -
+                                            эмульсия
+                                            для укрепления</span>
+                                        <span class="homecare__subtitle h5 text-right">1400 ₽ </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="homecare__slider--buttons flex">
+                                <div class="homecare__btn flex">
+                                    <button class="btn-slider" id="prev-btn">
+                                        <img src="images/homecare__prev.svg" alt="" loading />
+                                    </button>
+                                    <button class="btn-slider" id="next-btn">
+                                        <img src="images/homecare__next.svg" alt="" loading />
+                                    </button>
+                                </div>
+                                <div class="homecare__a h5 primary-color">Шампуни <br /> и кондиционеры</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="homecare__slide">
+                        <div class="container">
+                            <div class="homecare__header flex justify-between align-center">
+                                <div class="homecare__title h2 text-uppercase primary-color">fdsfdsf <br /> уход</div>
+                                <button class="btn">Смотреть все</button>
+                            </div>
+                            <div class="homecare__card flex">
+                                <a class="homecare__link secondary-color" href="#">
+                                    <span class="homecare__content flex">
+                                        <span>
+                                            <img src="images/homecare__card1.png" alt="" loading />
+                                        </span>
+                                        <span class="homecare__details">
+                                            <span class='homecare__detail'>
+                                                <img src="images/hits__icon.svg" alt="" loading />
+                                                <span class="text-uppercase">Подробнее</span>
+                                            </span>
+                                            <span class='homecare__detail font-700 accent-color text-center'>
+                                                200
+                                                <sup class="homecare__detail--sup">мл</sup>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="homecare__desc flex justify-between">
+                                        <span class="homecare__subtitle h6 text-left">Детокс -
+                                            эмульсия
+                                            для укрепления</span>
+                                        <span class="homecare__subtitle h5 text-right">1400 ₽ </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="homecare__slider--buttons flex">
+                                <div class="homecare__btn flex">
+                                    <button class="btn-slider" id="prev-btn">
+                                        <img src="images/homecare__prev.svg" alt="" loading />
+                                    </button>
+                                    <button class="btn-slider" id="next-btn">
+                                        <img src="images/homecare__next.svg" alt="" loading />
+                                    </button>
+                                </div>
+                                <div class="homecare__a h5 primary-color">Шампуни <br /> и кондиционеры</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="homecare__slide">
+                        <div class="container">
+                            <div class="homecare__header flex justify-between align-center">
+                                <div class="homecare__title h2 text-uppercase primary-color">Домашнfdsfsfий <br /> уход
+                                </div>
+                                <button class="btn">Смотреть все</button>
+                            </div>
+                            <div class="homecare__card flex">
+                                <a class="homecare__link secondary-color" href="#">
+                                    <span class="homecare__content flex">
+                                        <span>
+                                            <img src="images/homecare__card1.png" alt="" loading />
+                                        </span>
+                                        <span class="homecare__details">
+                                            <span class='homecare__detail'>
+                                                <img src="images/hits__icon.svg" alt="" loading />
+                                                <span class="text-uppercase">Подробнее</span>
+                                            </span>
+                                            <span class='homecare__detail font-700 accent-color text-center'>
+                                                200
+                                                <sup class="homecare__detail--sup">мл</sup>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="homecare__desc flex justify-between">
+                                        <span class="homecare__subtitle h6 text-left">Детокс -
+                                            эмульсия
+                                            для укрепления</span>
+                                        <span class="homecare__subtitle h5 text-right">1400 ₽ </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="homecare__slider--buttons flex">
+                                <div class="homecare__btn flex">
+                                    <button class="btn-slider" id="prev-btn">
+                                        <img src="images/homecare__prev.svg" alt="" loading />
+                                    </button>
+                                    <button class="btn-slider" id="next-btn">
+                                        <img src="images/homecare__next.svg" alt="" loading />
+                                    </button>
+                                </div>
+                                <div class="homecare__a h5 primary-color">Шампуни <br /> и кондиционеры</div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <section class="hits" id="hits">
+                <div class="container">
+                    <div class="hits__wrapper">
+                        <div class="hits__header flex justify-between">
+                            <div class="hits__title h2 text-uppercase">Хиты и новинки</div>
+                            <button class="btn">Смотреть все хиты и новинки</button>
+                        </div>
+                        <ul class="hits__list flex justify-between">
+                            <li class="hits__item flex">
+                                <a class="hits__link" href="#">
+                                    <span class="hits__image">
+                                        <img src="images/hits__item1.png" alt="" loading />
+                                        <img class='hits__icon' src="images/hits__icon.svg" alt="" loading />
+                                    </span>
+                                    <span class="hits__subtitle h6 text-center secondary-color">БОТОКС 2.0</span>
+                                </a>
+                                <span class="hits__desc clamped-6">
+                                    Состав для классического горячего ботокса, с натуральными маслами и щадящем
+                                    воздействии на волосы, имеет накопительный эффект.
+                                </span>
+                            </li>
+                            <li class="hits__item flex">
+                                <a class="hits__link" href="#">
+                                    <span class="hits__image">
+                                        <img src="images/hits__item2.png" alt="" loading />
+                                        <img class='hits__icon' src="images/hits__icon.svg" alt="" loading />
+                                    </span>
+                                    <span class="hits__subtitle h6 text-center secondary-color">SUN DEFEND</span>
+                                </a>
+                                <div class="hits__desc clamped-6">
+                                    Серия продуктов для защиты и ухода за волосами в летнюю жару, в поездках на море,
+                                    регулярном посещении бассейа или сауны.
+                                </div>
+                            </li>
+                            <li class="hits__item flex">
+                                <a class="hits__link" href="#">
+                                    <span class="hits__image">
+                                        <img src="images/hits__item3.png" alt="" loading />
+                                        <img class='hits__icon' src="images/hits__icon.svg" alt="" loading />
+                                    </span>
+                                    <span class="hits__subtitle h6 text-center secondary-color">The FOUNDATION
+                                        Shampoo</span>
+                                </a>
+                                <div class="hits__desc clamped-6">
+                                    Базовый шампунь для ежедневного домашнего ухода, содержит мягкие ПАВы и натуральные
+                                    масла. Без силиконов и парабенов.
+                                </div>
+                            </li>
+                            <li class="hits__item flex">
+                                <a class="hits__link" href="#">
+                                    <span class="hits__image">
+                                        <img src="images/hits__item4.png" alt="" loading />
+                                        <img class='hits__icon' src="images/hits__icon.svg" alt="" loading />
+                                    </span>
+                                    <span class="hits__subtitle h6 text-center secondary-color">ПРОТЕИНОВАЯ МАСКА</span>
+                                </a>
+                                <div class="hits__desc clamped-6">
+                                    Питает и насыщает волосы. Используется как во время проведения процедур в салонах,
+                                    так и для домашнего ухода с базовым шампунем.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="promotions" id="promotions">
+                <div class="promotions__wrapper flex justify-between">
+                    <div class="promotions__card">
+                        <div class="promotions__title h2 text-uppercase">
+                            <span>Акции и спецпредложения</span>
+                            <img src="images/promotions__vector.svg" alt="" loading />
+                        </div>
+                        <div class="promotions__content">
+                            <span class="promotions__subtitle h4 text-uppercase">
+                                Летняя акция на домашний уход
+                            </span>
+                            <span class="promotions__desc h6">
+                                Состав для классического горячего ботокса, с натуральными маслами и щадящем
+                                воздействии на волосы, имеет накопительный эффект.
+                            </span>
+                            <button class="btn">Смотреть все</button>
+                        </div>
+                    </div>
+                    <div class="promotions__image">
+                        <img src="images/promotions.png" alt="" loading />
+                    </div>
+                </div>
+            </section>
+
+            <section class="hashtag">
+                <div class="container">
+                    <div class="hashtag__wrapper flex primary-color">
+                        <div class="hashtag__content flex  text-uppercase">
+                            <div class="hashtag__title">Хештег</div>
+                            <div class="hashtag__desc text-center">Размести в своем инстаграмме фото
+                                с кудрями и хештегом
+                                #PRODIVACurly
+                                и получи скидка на набор для выпрямления волос Curly 2 Straight</div>
+                        </div>
+                        <div class="hashtag__hashtag"> #PRODIVACurly </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="blog" id="blog">
+                <div class="container">
+                    <div class="blog__wrapper">
+                        <div class="blog__header flex justify-between">
+                            <div class="blog__title h2 text-uppercase">Публикации блога</div>
+                            <button class="btn text-uppercase">Все публикации</button>
+                        </div>
+                        <ul class="blog__list flex justify-between">
+                            <li class="blog__item blog__shadow"
+                                style="background-image: url('images/blog__item1.png'); background-size: cover; background-position: center; object-fit: cover;">
+                                <a class="blog__link" href="#">
+                                    <span class="blog__category">
+                                        Новинка
+                                    </span>
+                                    <span class="blog__content">
+                                        <span class="blog__subtitle h5">Ботокс для волос</span>
+                                        <span class="blog__desc clamped-3">И для мастеров и для клиентов важно, чтобы
+                                            эффект от дорогостоящих процедур сохранялся как можно...</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="blog__item blog__shadow"
+                                style="background-image: url('images/blog__item2.png'); background-size: cover; background-position: center; object-fit: cover;">
+                                <a class="blog__link" href="#">
+                                    <span class="blog__category">
+                                        Обзор
+                                    </span>
+                                    <span class="blog__content">
+                                        <span class="blog__subtitle h5">Ботокс для волос</span>
+                                        <span class="blog__desc clamped-3">И для мастеров и для клиентов важно, чтобы
+                                            эффект от дорогостоящих процедур сохранялся как можно...</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="blog__item blog__shadow"
+                                style="background-image: url('images/blog__item3.png'); background-size: cover; background-position: center; object-fit: cover;">
+                                <a class="blog__link" href="#">
+                                    <span class="blog__category">
+                                        Новинка
+                                    </span>
+                                    <span class="blog__content">
+                                        <span class="blog__subtitle h5">Ботокс для волос</span>
+                                        <span class="blog__desc clamped-3">И для мастеров и для клиентов важно, чтобы
+                                            эффект от дорогостоящих процедур сохранялся как можно...</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="blog__item blog__shadow"
+                                style="background-image: url('images/blog__item4.png'); background-size: cover; background-position: center; object-fit: cover;">
+                                <a class="blog__link" href="#">
+                                    <span class="blog__category">
+                                        Экспертиза
+                                    </span>
+                                    <span class="blog__content">
+                                        <span class="blog__subtitle h5">Ботокс для волос</span>
+                                        <span class="blog__desc clamped-3">И для мастеров и для клиентов важно, чтобы
+                                            эффект от дорогостоящих процедур сохранялся как можно...</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services">
+                <div class="container">
+                    <ul class="services__wrapper flex">
+                        <li class="services__card flex justify-between align-center" id="partnership">
+                            <div class="services__image card1 flex align-center">
+                                <img src="images/services__card1.png" alt="" loading />
+                            </div>
+                            <div class="services__content">
+                                <div class="services__title h2 text-uppercase">
+                                    Партнерство с PRODIVA
+                                </div>
+                                <div class="services__desc h6 clamped-10">
+                                    130 представителей в 75 регионах России и странах СНГ.
+                                    Если вы опытный технолог, владелец сети салонов красоты или дистрибьютор
+                                    профессиональной косметики, для каждого из вас, мы подберем и предложим свой вариант
+                                    взаимовыгодного сотрудничества.
+                                </div>
+                                <button class="btn text-uppercase">узнать подробнее</button>
+                            </div>
+                        </li>
+                        <li class="services__card flex justify-between row-reverse align-center" id="studies">
+                            <div class="services__image">
+                                <img src="images/services__card2.png" alt="" loading />
+                            </div>
+                            <div class="services__content">
+                                <div class="services__title h2 text-uppercase">
+                                    Обучение мастеров и технологов
+                                </div>
+                                <div class="services__desc h6 clamped-10">
+                                    Онлайн вебинары, мастер-классы, живые трансляции, практическое обучение в
+                                    студии.Обучаем мастеров выполнению востребованных процедур и корректной работе с
+                                    составами. Проводим обязательную квалификацию действующих технологов. Презентуем
+                                    новые продукты, приглашаем известных мастеров и преподавателей индустрии красоты!
+                                </div>
+                                <button class="btn text-uppercase">оставить заявку на обучение</button>
+                            </div>
+                        </li>
+                        <li class="services__card flex justify-between align-center">
+                            <div class="services__image">
+                                <img src="images/services__card3.png" alt="" loading />
+                            </div>
+                            <div class="services__content">
+                                <div class="services__title h2 text-uppercase">
+                                    Сервис для клиентов
+                                </div>
+                                <div class="services__desc h6 clamped-10">
+                                    Если вы хотите подобрать домашний уход, получить консультацию или сделать процедуру
+                                    по реконструкции волос, Ботокс, Кератиновое выпрямление, прикорневой объем и т.п. -
+                                    оставьте заявку и с вами свяжется один из аттестованных мастеров, который работает
+                                    на составах PRODIVA в вашем городе.
+                                </div>
+                                <button class="btn text-uppercase">оставить заявку</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="about" id="about">
+                <div class="container">
+                    <div class="about__wrapper flex justify-between align-center">
+                        <div class="about__content">
+                            <div class="about__logo">
+                                <img src="images/about__logo.png" alt="" loading />
+                            </div>
+                            <div class="about__desc h6">
+                                PRODIVA – натуральная профессиональная косметика для волос. Ухоженные волосы
+                                выглядят здоровыми и гладкими, живыми и сияющими. Они радуют гладкостью шелка при
+                                легком прикосновении, красиво лежат и развиваются при каждом движении. Такими
+                                волосами хочется бесконечно любоваться и с гордостью носить.
+                            </div>
+                            <div class="about__desc h6 clamped-10">
+                                Как добиться нужного эффекта, и как сохранить его как можно дольше без изнурительных
+                                утренних ритуалов? Лучшие средства и способы самостоятельного домашнего ухода, не смогут
+                                дать того, что хочется хозяйке волос. Если хочется позитивных перемен, нового стиля, то
+                                часто приходят мысли о новом цвете или оттенке, дополнительном объеме, может возникнуть
+                                желание сделать волосы прямыми или же наоборот – обзавестись шикарными кудрями. Но
+                                сделать это безопасно для здоровья волос, подобрать нужные составы и добиться нужного
+                                и долгосрочного результата.
+                            </div>
+                            <button class="btn btn--l text-uppercase">Подробнее</button>
+                        </div>
+                        <div class="about__image">
+                            <img src="images/about__img.png" alt="" loading />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form">
+                <div class="container">
+                    <form class="form__wrapper flex justify-between">
+                        <div class="form__title h3 text-uppercase primary-color">Проконсультируйтесь с технологом</div>
+                        <div class="form__action flex justify-between">
+                            <input type="email" class="form__input" placeholder="ВАШ Email:" />
+                            <button class="btn" type="submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" id="footer">
+            <div class="footer__wrapper">
+                <div class="container">
+                    <div class="footer__action flex justify-between">
+                        <div class="footer__navs flex text-uppercase line-height-34">
+                            <ul class="footer__nav">
+                                <li>
+                                    <a href="index.html">
+                                        <span>
+                                            <img src="images/footer__logo.png" alt="" loading />
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#about">О бренде</a>
+                                </li>
+                                <li>
+                                    <a href="#footer">Контакты</a>
+                                </li>
+                                <li>
+                                    <a href="#promotions">Акции</a>
+                                </li>
+                                <li>
+                                    <a href="#hits">Новинки</a>
+                                </li>
+                                <li>
+                                    <a href="#contacts">Где купить?</a>
+                                </li>
+                                <li>
+                                    <a href="#partnership">Партнерам</a>
+                                </li>
+                                <li>
+                                    <a href="#studies">Обучение</a>
+                                </li>
+                                <li>
+                                    <a href="#blog">Статьи</a>
+                                </li>
+                            </ul>
+                            <ul class="footer__nav--products">
+                                <li>
+                                    <span>ПРОФЕССИОНАЛЬНАЯ ПРОДУКЦИЯ</span>
+                                </li>
+                                <li>
+                                    <a href="#products">Лечение и восстановление волос</a>
+                                </li>
+                                <li>
+                                    <a href="#products">Ботокс</a>
+                                </li>
+                                <li>
+                                    <a href="#products">Кератин</a>
+                                </li>
+                                <li>
+                                    <a href="#products">Шампунь</a>
+                                </li>
+                                <li>
+                                    <a href="#products">Стайлинг</a>
+                                </li>
+                                <li>
+                                    <a href="#products">Прикорневой объем и антихимия</a>
+                                </li>
+                                <li>
+                                    <a href="#products">Питательные концентраты</a>
+                                </li>
+                                <li>
+                                    <a href="#products">Полуперманентные красители</a>
+                                </li>
+                            </ul>
+                            <ul class="footer__nav--homecare">
+                                <li>
+                                    <span>ДОМАШНИЙ УХОД</span>
+                                </li>
+                                <li>
+                                    <a href="#homecare">Шампуни и кондиционеры</a>
+                                </li>
+                                <li>
+                                    <a href="#homecare">Домашние маски для волос</a>
+                                </li>
+                                <li>
+                                    <a href="#homecare">Несмываемые уходы</a>
+                                </li>
+                                <li>
+                                    <a href="#homecare">Уходы для блонда</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__connection flex">
+                            <div class="footer__social flex">
+                                <a href="https://m.vk.com/" target="blank" rel="noopener noreferrer">
+                                    <span class="footer__vk">
+                                        <img src="images/footer__vk.svg" alt="" loading />
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="footer__contacts flex justify-between line-height-22">
+                                <ul>
+                                    <li>
+                                        <span>КОНТАКТЫ</span>
+                                    </li>
+                                    <li>
+                                        <a class="contacts__action font-300  primary-color"
+                                            href="https://yandex.ru/maps/10740/mytischi/house/ulitsa_very_voloshinoy_19_16/Z04YcQVgSkIBQFtvfXR4cnRnbQ==/?indoorLevel=1&ll=37.720376%2C55.893849&z=16.63"
+                                            target="_blank" rel="noopener noreferrer">г. Мытищи,<br />
+                                            ул. Веры Волошиной<br />
+                                            д. 19 офис 347
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:+7(495)1182024" target="blank" rel="noopener noreferrer">
+                                            Телефон: +7 495 118-20-24
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:info@prodiva.ru" target="blank"
+                                            rel="noopener noreferrer">E-mail:
+                                            info@prodiva.ru</a>
+                                    </li>
+                                    <li>
+                                        <div>Пн-Пт: 9:00-18:00,</div>
+                                        <div> Сб-Вс: выходные</div>
+                                    </li>
+                                </ul>
+                                <button class="btn">Есть вопросы? Звоните</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__content">
+                <div class="container">
+                    <div class="footer__a flex justify-between align-center">
+                        <div class="footer__b  text-center">
+                            <span class="c primary-color">2022 © ПроДива</span>
+                            <a href="#"> Политика конфиденциальности </a>
+                            <a href="#"> Условия продаж</a>
+                            <a href="#">Карта сайта</a>
+                        </div>
+                        <div class="flex align-center">
+                            <span class="primary-color">Разработка - <span class="accent-color">First Art
+                                    Studio</span></span>
+                            <div class="footer__image">
+                                <img src="images/footer__bank.png" alt="" loading />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="popup">
+        <div class="popup__wrapper flex">
+            <div class="popup__image flex h2 primary-color">
+                Форма <br /> обратной <br /> связи
+                <div class="popup__close">
+                    <span class="popup__cross"></span>
+                    <span class="popup__cross popup__cross--vertical"></span>
+                </div>
+            </div>
+            <form class="popup__form flex">
+                <input type="text" class="popup__input" placeholder="ВАШЕ ИМЯ:" />
+                <input type="email" class="popup__input" placeholder="ВАШ EMAIL:" />
+                <textarea name="message" rows="6" class="popup__form-field" placeholder="СООБЩЕНИЕ:"></textarea>
+                <button class="btn" type="submit">Отправить</button>
+            </form>
+
+        </div>
+
+        <script src="/js/index.js"></script>
+</body>
+
+</html>

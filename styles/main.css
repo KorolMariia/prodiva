@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+h2,
+.h2 {
+    font-size: 6.4rem;
+    line-height: auto;
+}
+
+h3,
+.h3 {
+    font-size: 4.8rem;
+    line-height: 5rem;
+}
+
+h4,
+.h4 {
+    font-size: 3.6rem;
+    line-height: auto;
+}
+
+h5,
+.h5 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+}
+
+h6,
+.h6 {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.line-height-22 {
+    line-height: 2.2rem;
+}
+
+.line-height-34 {
+    line-height: 3.4rem;
+}
+
+.font-300 {
+    font-weight: 300;
+}
+
+.font-400 {
+    font-weight: 400;
+}
+
+.font-700 {
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.btn {
+    padding: 2rem 4rem;
+    border: none;
+    outline: none;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.btn:hover,
+.btn-slider:hover {
+    background-color: rgba(224, 58, 58, 0.8);
+    transition: all .4s;
+}
+
+.btn--l {
+    padding: 2rem 6rem;
+}
+
+.btn-slider {
+    padding: 2.6rem;
+    margin-right: 2.5rem;
+    background-color: transparent;
+    color: var(--primary-color);
+    border-radius: 50%;
+    border: 0.1rem solid var(--primary-color);
+}
+
+.clamped-3 {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.clamped-6 {
+    display: -webkit-box;
+    line-clamp: 6;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.clamped-10 {
+    display: -webkit-box;
+    line-clamp: 10;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+.vertical-align {
+    vertical-align: top;
+}
