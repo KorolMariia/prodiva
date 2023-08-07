@@ -370,7 +370,6 @@
 .homecare__slider {
     display: flex;
     overflow: hidden;
-    /* Скрыть содержимое, которое не помещается внутри слайдера */
     min-height: 100vh;
 }
 
@@ -378,20 +377,15 @@
     padding: 6rem 0 3rem;
     transition: transform 1s ease-in-out;
     min-width: 100%;
-    /* Плавный переход для свойства transform с продолжительностью 1 секунда и плавным входом и выходом */
 }
 
-/* Класс для активного слайда */
 .active-slide {
     transform: translateX(0);
-    /* Показываем активный слайд */
 }
 
-/* Класс для ухода слайда влево */
 .slide-out-left {
     position: absolute;
     transform: translateX(-100%);
-    /* Смещение слайда влево на 100% от ширины слайда */
 }
 
 .homecare__header button {
