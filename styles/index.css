@@ -176,7 +176,7 @@
 }
 
 .header__phone,
-.header__search {
+.header__search--btn {
     margin-right: 7rem;
     white-space: nowrap;
 }
@@ -188,6 +188,29 @@
 .header__phone:hover,
 .header__phone--xs:hover {
     color: var(--accent-color);
+}
+
+.header__search--wrapper {
+    display: none;
+    padding: 1.5rem;
+    position: absolute;
+    top: 9.6rem;
+    right: 70px;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 37rem;
+}
+
+.header__search--image {
+    margin-right: 2rem;
+}
+
+.header__search--input {
+    border: none;
+    height: 4rem;
+    width: 100%;
 }
 
 .header__cart {
@@ -989,7 +1012,8 @@
     }
 
     .header__phone,
-    .header__search {
+    .header__search,
+    .header__search--btn {
         margin-right: 2rem;
     }
 
@@ -1122,16 +1146,32 @@
     }
 
     .header__nav,
-    .header__cart--wrapper {
+    .header__cart--wrapper,
+    .header__search--wrapper {
         display: none;
+        flex-direction: column;
         position: fixed;
         margin: 0;
         width: 100vw;
         height: 100%;
         top: 0;
         bottom: 0;
+        right: 0;
         border-radius: 0;
         padding: 5rem 5rem;
+    }
+
+    .header__search--image {
+        padding-bottom: 2rem;
+        border-bottom: 0.1rem solid var(--third-color);
+    }
+
+    .header__search--image img {
+        margin-right: 1rem;
+    }
+
+    .header__search--xs button {
+        margin: 0;
     }
 
     .header__burger-menu--desc,
@@ -1168,7 +1208,6 @@
     .products__items {
         flex-wrap: wrap;
     }
-
 
     .products__item {
         flex-basis: 100%;

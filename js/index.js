@@ -28,6 +28,45 @@ headerProductsWrapper.addEventListener('mouseleave', hideHeaderNav);
 headerNav.addEventListener('mouseover', clearHideMenuTimeout);
 headerNav.addEventListener('mouseleave', hideHeaderNav);
 
+// Header search
+const headerSearchBtns = document.querySelectorAll('.header__search--btn');
+const headerSearchWrappers = document.querySelectorAll('.header__search--wrapper');
+const headerSearchInputs = document.querySelectorAll('.header__search--input');
+let timeoutIds = [];
+
+const showSearch = () => {
+  headerSearchWrappers.forEach((wrapper) => {
+    wrapper.style.display = 'flex';
+    headerSearchInputs.forEach((input) => {
+      input.focus();
+    });
+  });
+};
+
+const hideSearch = () => {
+  headerSearchWrappers.forEach((wrapper, index) => {
+    timeoutIds[index] = setTimeout(function () {
+      wrapper.style.display = 'none';
+    }, 200);
+  });
+};
+
+const clearHideSearchTimeout = (index) => {
+  clearTimeout(timeoutIds[index]);
+};
+
+headerSearchBtns.forEach((btn) => {
+  btn.addEventListener('mouseover', showSearch);
+  btn.addEventListener('mouseleave', hideSearch);
+});
+
+headerSearchWrappers.forEach((wrapper, index) => {
+  wrapper.addEventListener('mouseover', () => clearHideSearchTimeout(index));
+  wrapper.addEventListener('mouseleave', () => hideSearch());
+});
+
+
+
 // Header cart list
 const headerCartBtn = document.querySelector('.header__cart--btn');
 const headerCartList = document.querySelector('.header__cart--wrapper');
@@ -114,4 +153,7 @@ const headerClose = document.querySelectorAll('.header__close--img');
 headerClose.forEach(item => item.addEventListener('click', () => {
   headerNav.style.display = 'none';
   headerCartList.style.display = 'none';
+  headerSearchWrappers.forEach(wrapper => {
+    wrapper.style.display = 'none';
+  })
 }))
