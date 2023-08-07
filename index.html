@@ -164,14 +164,14 @@
                                             <img src="images/header__cart--img.png" alt="" loading />
                                         </div>
                                         <div class="header__cart--desc text-left">
-                                            <div class="header__cart--poduct flex">
+                                            <div class="header__cart--product flex">
                                                 <span class="text-uppercase">Профессиональный базовый
                                                     шампунь для домашнего ухода THE FOUNDATION SHAMPOO</span>
                                                 <span class="header__cart--remove">
                                                     <img src="images/header__cart--remove.svg" alt="" loading />
                                                 </span>
                                             </div>
-                                            <div class="flex justify-between align-center">
+                                            <div class="header__cart--general flex justify-between align-center">
                                                 <span class="header__cart--quantity">
                                                     <button class="quantity-btn h6">-</button>
                                                     <span class="quantity-value h6">1</span>
@@ -189,14 +189,14 @@
                                             <img src="images/header__cart--img.png" alt="" loading />
                                         </div>
                                         <div class="header__cart--desc text-left">
-                                            <div class="header__cart--poduct flex">
+                                            <div class="header__cart--product flex">
                                                 <span class="text-uppercase">Профессиональный базовый
                                                     шампунь для домашнего ухода THE FOUNDATION SHAMPOO</span>
                                                 <span class="header__cart--remove">
                                                     <img src="images/header__cart--remove.svg" alt="" loading />
                                                 </span>
                                             </div>
-                                            <div class="flex justify-between align-center">
+                                            <div class="header__cart--general flex justify-between align-center">
                                                 <span class="header__cart--quantity">
                                                     <button class="quantity-btn h6">-</button>
                                                     <span class="quantity-value h6">1</span>
@@ -211,7 +211,7 @@
                                     </li>
                                 </ul>
                                 <div class="header__cart--sum flex justify-between font-400 text-uppercase">
-                                    <div>Итоговая сумма</div>
+                                    <div class="header__cart--desc">Итоговая сумма</div>
                                     <div class="header__cart--price h5">530 000 ₽</div>
                                 </div>
                                 <a href="#" class="btn text-uppercase">
@@ -317,8 +317,8 @@
                                 <div class='hero__slide--content flex'>
                                     <button class='btn hero__slide--btn'>Узнать больше</button>
                                     <div class='hero__slide--desc h6'>
-                                        <div>Новинка с корректирующим пигментом</div>
-                                        <div>2х степеней глубины тона для светлых волос!</div>
+                                        <span>Новинка с корректирующим пигментом</span>
+                                        <span>2х степеней глубины тона для светлых волос!</span>
                                     </div>
                                 </div>
                             </div>
@@ -332,8 +332,8 @@
                                 <div class='hero__slide--content flex'>
                                     <button class='btn hero__slide--btn'>Узнать больше</button>
                                     <div class='hero__slide--desc h6 primary-color'>
-                                        <div>Новинка с корректирующим пигментом</div>
-                                        <div>2х степеней глубины тона для светлых волос!</div>
+                                        <span>Новинка с корректирующим пигментом</span>
+                                        <span>2х степеней глубины тона для светлых волос!</span>
                                     </div>
                                 </div>
                             </div>
@@ -346,8 +346,8 @@
                                 <div class='hero__slide--content flex'>
                                     <button class='btn hero__slide--btn'>Узнать больше</button>
                                     <div class='hero__slide--desc h6'>
-                                        <div>Новинка с корректирующим пигментом</div>
-                                        <div>2х степеней глубины тона для светлых волос!</div>
+                                        <span>Новинка с корректирующим пигментом</span>
+                                        <span>2х степеней глубины тона для светлых волос!</span>
                                     </div>
                                 </div>
                             </div>
@@ -361,8 +361,8 @@
                                 <div class='hero__slide--content flex'>
                                     <button class='btn hero__slide--btn'>Узнать больше</button>
                                     <div class='hero__slide--desc h6 primary-color'>
-                                        <div>Новинка с корректирующим пигментом</div>
-                                        <div>2х степеней глубины тона для светлых волос!</div>
+                                        <span>Новинка с корректирующим пигментом</span>
+                                        <span>2х степеней глубины тона для светлых волос!</span>
                                     </div>
                                 </div>
                             </div>
@@ -956,8 +956,8 @@
                                             info@prodiva.ru</a>
                                     </li>
                                     <li>
-                                        <div>Пн-Пт: 9:00-18:00,</div>
-                                        <div> Сб-Вс: выходные</div>
+                                        <div class="contacts__action--schedule">Пн-Пт: 9:00-18:00,</div>
+                                        <div class="contacts__action--schedule"> Сб-Вс: выходные</div>
                                     </li>
                                 </ul>
                                 <button class="btn">Есть вопросы? Звоните</button>
@@ -968,9 +968,9 @@
             </div>
             <div class="footer__content">
                 <div class="container">
-                    <div class="footer__a flex justify-between align-center">
-                        <div class="footer__b  text-center">
-                            <span class="c primary-color">2022 © ПроДива</span>
+                    <div class="footer__content--wrapper flex justify-between align-center">
+                        <div class="footer__content--action text-center">
+                            <span class="primary-color">2022 © ПроДива</span>
                             <a href="#"> Политика конфиденциальности </a>
                             <a href="#"> Условия продаж</a>
                             <a href="#">Карта сайта</a>
