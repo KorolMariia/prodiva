@@ -77,21 +77,21 @@
     z-index: 1000;
 }
 
-.header__item {
+.header__list li {
     padding: 2.5rem 4rem;
     border-bottom: 0.1rem solid var(--third-color);
     white-space: nowrap;
 }
 
-.header__item:last-child {
+.header__list li:last-child {
     border-bottom: none;
 }
 
-.header__item a:hover {
+.header__list li a:hover {
     color: var(--accent-color);
 }
 
-.header__item a img {
+.header__list li a img {
     margin-right: 2rem;
 }
 
@@ -1391,6 +1391,10 @@
         cursor: pointer;
         margin-left: auto;
         margin-bottom: 5rem;
+    }
+
+    .header__list li {
+        padding: 2.5rem 1rem;
     }
 
     .products__items {

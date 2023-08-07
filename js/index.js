@@ -149,6 +149,12 @@ document.addEventListener("DOMContentLoaded", function () {
 // Hero nav
 const heroNavBtn = document.querySelector('.hero__burger-menu');
 const heroNav = document.querySelector('.hero__nav');
+const heroItems = heroNav.querySelectorAll('li');
+
+heroItems.forEach(item => item.addEventListener('click', (event) => {
+  event.stopPropagation();
+  heroNav.style.display = 'none';
+}));
 const minWidthForScript = 1023;
 
 const showHeroNav = () => {
