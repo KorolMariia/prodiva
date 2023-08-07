@@ -133,7 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, delay);
   });
 
-
   languageMenu.addEventListener("mouseenter", function () {
     clearTimeout(menuTimer);
   });
@@ -150,6 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Hero nav
 const heroNavBtn = document.querySelector('.hero__burger-menu');
 const heroNav = document.querySelector('.hero__nav');
+const minWidthForScript = 1023;
 
 const showHeroNav = () => {
   heroNav.style.display = 'flex';
@@ -168,7 +168,80 @@ const clearHideHeroNavTimeout = () => {
 heroNavBtn.addEventListener('mouseover', showHeroNav);
 heroNavBtn.addEventListener('mouseleave', hideHeroNav);
 heroNav.addEventListener('mouseover', clearHideHeroNavTimeout);
-heroNav.addEventListener('mouseleave', hideHeroNav);
+if (window.innerWidth <= minWidthForScript) {
+  heroNav.addEventListener('mouseleave', hideHeroNav)
+}
+
+// Hero Slider
+const slideSwitchers = document.querySelectorAll('.hero__slide--switch');
+const sliderWrapper = document.querySelector('.hero__slider--wrapper');
+
+let activeSlideIndex = 0;
+let intervalId;
+
+slideSwitchers.forEach((switcher, index) => {
+  switcher.addEventListener('click', () => {
+    clearInterval(intervalId);
+    if (index !== activeSlideIndex) {
+      activeSlideIndex = index;
+      updateSliderPosition();
+      updateActiveSwitcher();
+    }
+    startAutoSlide();
+  });
+});
+
+const updateSliderPosition = () => {
+  const slideWidth = document.querySelector('.hero__slide').clientWidth;
+  const offset = -activeSlideIndex * slideWidth;
+  sliderWrapper.style.transform = `translateX(${offset}px)`;
+}
+
+const updateActiveSwitcher = () => {
+  slideSwitchers.forEach((switcher, index) => {
+    if (index === activeSlideIndex) {
+      switcher.classList.add('active-slide');
+    } else {
+      switcher.classList.remove('active-slide');
+    }
+  });
+}
+
+const startAutoSlide = () => {
+  intervalId = setInterval(() => {
+    activeSlideIndex = (activeSlideIndex + 1) % slideSwitchers.length;
+    updateSliderPosition();
+    updateActiveSwitcher();
+  }, 5000);
+}
+
+startAutoSlide();
+
+// Homecare slider
+const slideArrows = document.querySelectorAll('.btn-slider');
+const homecareSlider = document.querySelector('.homecare__slider--wrapper');
+const slides = document.querySelectorAll('.homecare__slide');
+
+let activeHomecareSlideIndex = 0;
+
+slideArrows.forEach((switcher, index) => {
+  switcher.addEventListener('click', () => {
+    if (index === 0) {
+      activeHomecareSlideIndex = (activeHomecareSlideIndex - 1 + slides.length) % slides.length;
+    } else if (index === 1) {
+      activeHomecareSlideIndex = (activeHomecareSlideIndex + 1) % slides.length;
+    }
+    updateHomecareSliderPosition();
+  });
+});
+
+const updateHomecareSliderPosition = () => {
+  const slideWidth = slides[0].getBoundingClientRect().width;
+  const offset = -activeHomecareSlideIndex * slideWidth;
+  homecareSlider.style.transform = `translateX(${offset}px)`;
+}
+
+updateHomecareSliderPosition();
 
 
 // Header close
