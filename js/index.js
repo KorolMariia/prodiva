@@ -147,6 +147,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Hero nav
+const heroNavBtn = document.querySelector('.hero__burger-menu');
+const heroNav = document.querySelector('.hero__nav');
+
+const showHeroNav = () => {
+  heroNav.style.display = 'flex';
+}
+
+const hideHeroNav = () => {
+  timeoutId = setTimeout(function () {
+    heroNav.style.display = 'none';
+  }, 200);
+}
+
+const clearHideHeroNavTimeout = () => {
+  clearTimeout(timeoutId);
+}
+
+heroNavBtn.addEventListener('mouseover', showHeroNav);
+heroNavBtn.addEventListener('mouseleave', hideHeroNav);
+heroNav.addEventListener('mouseover', clearHideHeroNavTimeout);
+heroNav.addEventListener('mouseleave', hideHeroNav);
+
+
 // Header close
 const headerClose = document.querySelectorAll('.header__close--img');
 
