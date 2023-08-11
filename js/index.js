@@ -181,6 +181,7 @@ if (window.innerWidth <= minWidthForScript) {
 // Hero Slider
 const slideSwitchers = document.querySelectorAll('.hero__slide--switch');
 const sliderWrapper = document.querySelector('.hero__slider--wrapper');
+const heroSlides = document.querySelectorAll('.hero__slide');
 
 let activeSlideIndex = 0;
 let intervalId;
@@ -198,10 +199,35 @@ slideSwitchers.forEach((switcher, index) => {
 });
 
 const updateSliderPosition = () => {
-  const slideWidth = document.querySelector('.hero__slide').clientWidth;
+  const slideWidth = heroSlides[0].clientWidth;
   const offset = -activeSlideIndex * slideWidth;
   sliderWrapper.style.transform = `translateX(${offset}px)`;
+
+  updateNextSlide();
 }
+
+const updateNextSlide = () => {
+  heroSlides.forEach((slide, index) => {
+    if (index === activeSlideIndex + 1) {
+      if (window.innerWidth > 650) {
+        if (slide.classList.contains('slide--one')) {
+          slide.classList.add('next-slide-one');
+          slide.classList.remove('next-slide-two');
+        }
+        if (slide.classList.contains('slide--two')) {
+          slide.classList.add('next-slide-two');
+          slide.classList.remove('next-slide-one');
+        }
+      } else {
+        slide.classList.remove('next-slide-one');
+        slide.classList.remove('next-slide-two');
+      }
+    } else {
+      slide.classList.remove('next-slide-one');
+      slide.classList.remove('next-slide-two');
+    }
+  });
+};
 
 const updateActiveSwitcher = () => {
   slideSwitchers.forEach((switcher, index) => {
@@ -221,7 +247,9 @@ const startAutoSlide = () => {
   }, 5000);
 }
 
+updateNextSlide();
 startAutoSlide();
+
 
 // Homecare slider
 const slideArrows = document.querySelectorAll('.btn-slider');

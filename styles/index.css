@@ -220,7 +220,7 @@
 .header__cart--counter {
     padding: 0.2rem;
     position: absolute;
-    right: 0rem;
+    right: 0.8rem;
     top: 0.5rem;
     border-radius: 50%;
     background-color: var(--accent-color);
@@ -315,6 +315,10 @@
     white-space: nowrap;
 }
 
+.hero__nav li:last-child a span {
+    margin-right: 13rem;
+}
+
 .hero__wrapper a {
     color: var(--secondary-color);
 }
@@ -328,6 +332,7 @@
 }
 
 .hero__slide {
+    position: relative;
     padding: 12rem 0 3rem;
     min-height: 90vh;
     min-width: 100vw;
@@ -375,6 +380,7 @@
 
 .hero__slide--switchers {
     gap: 1.3rem;
+    margin-right: 13rem;
 }
 
 .hero__slide--switch {
@@ -396,6 +402,21 @@
     width: 100%;
     position: absolute;
     bottom: 2rem;
+}
+
+.next-slide-one {
+    padding: 0 20rem;
+    z-index: 1000 !important;
+    transform: translateX(-13rem);
+    background-position: -85rem;
+}
+
+.next-slide-two {
+    padding: 0 20rem;
+    z-index: 1000 !important;
+    transform: translateX(-13rem);
+    background-position: -25rem;
+    background-size: contain;
 }
 
 /* Products */
@@ -1180,6 +1201,7 @@
 
     .hero__slide--title {
         font-size: 5.4rem;
+        margin-right: 13rem;
     }
 
     /* Hits */
