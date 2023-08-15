@@ -194,7 +194,7 @@ slideSwitchers.forEach((switcher, index) => {
       updateSliderPosition();
       updateActiveSwitcher();
     }
-    startAutoSlide();
+    // startAutoSlide();
   });
 });
 
@@ -248,7 +248,7 @@ const startAutoSlide = () => {
 }
 
 updateNextSlide();
-startAutoSlide();
+// startAutoSlide();
 
 
 // Homecare slider
