@@ -138,7 +138,8 @@ img {
 }
 
 .btn-slider {
-    padding: 2.6rem;
+    width: 6.8rem;
+    height: 6.8rem;
     margin-right: 2.5rem;
     background-color: transparent;
     color: var(--primary-color);

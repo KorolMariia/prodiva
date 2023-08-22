@@ -146,38 +146,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Hero nav
-const heroNavBtn = document.querySelector('.hero__burger-menu');
-const heroNav = document.querySelector('.hero__nav');
-const heroItems = heroNav.querySelectorAll('li');
-
-heroItems.forEach(item => item.addEventListener('click', (event) => {
-  event.stopPropagation();
-  heroNav.style.display = 'none';
-}));
-const minWidthForScript = 1023;
-
-const showHeroNav = () => {
-  heroNav.style.display = 'flex';
-}
-
-const hideHeroNav = () => {
-  timeoutId = setTimeout(function () {
-    heroNav.style.display = 'none';
-  }, 200);
-}
-
-const clearHideHeroNavTimeout = () => {
-  clearTimeout(timeoutId);
-}
-
-heroNavBtn.addEventListener('mouseover', showHeroNav);
-heroNavBtn.addEventListener('mouseleave', hideHeroNav);
-heroNav.addEventListener('mouseover', clearHideHeroNavTimeout);
-if (window.innerWidth <= minWidthForScript) {
-  heroNav.addEventListener('mouseleave', hideHeroNav)
-}
-
 // Hero Slider
 const slideSwitchers = document.querySelectorAll('.hero__slide--switch');
 const sliderWrapper = document.querySelector('.hero__slider--wrapper');
@@ -202,32 +170,7 @@ const updateSliderPosition = () => {
   const slideWidth = heroSlides[0].clientWidth;
   const offset = -activeSlideIndex * slideWidth;
   sliderWrapper.style.transform = `translateX(${offset}px)`;
-
-  updateNextSlide();
 }
-
-const updateNextSlide = () => {
-  heroSlides.forEach((slide, index) => {
-    if (index === activeSlideIndex + 1) {
-      if (window.innerWidth > 650) {
-        if (slide.classList.contains('slide--one')) {
-          slide.classList.add('next-slide-one');
-          slide.classList.remove('next-slide-two');
-        }
-        if (slide.classList.contains('slide--two')) {
-          slide.classList.add('next-slide-two');
-          slide.classList.remove('next-slide-one');
-        }
-      } else {
-        slide.classList.remove('next-slide-one');
-        slide.classList.remove('next-slide-two');
-      }
-    } else {
-      slide.classList.remove('next-slide-one');
-      slide.classList.remove('next-slide-two');
-    }
-  });
-};
 
 const updateActiveSwitcher = () => {
   slideSwitchers.forEach((switcher, index) => {
@@ -246,8 +189,6 @@ const startAutoSlide = () => {
     updateActiveSwitcher();
   }, 5000);
 }
-
-updateNextSlide();
 // startAutoSlide();
 
 
