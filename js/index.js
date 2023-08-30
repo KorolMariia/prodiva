@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
   selectedLanguage.textContent = "RU";
 
   languageOptions.forEach(option => {
-    option.addEventListener("click", () => {
+    option.addEventListener("click", function () {
       const selectedLang = this.getAttribute("data-lang");
       selectedLanguage.setAttribute("data-lang", selectedLang);
       selectedLanguage.textContent = selectedLang.toUpperCase();
