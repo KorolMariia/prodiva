@@ -1210,10 +1210,11 @@
     .hero__nav--xs {
         display: flex;
         flex-direction: column;
+        padding: 1rem 4rem;
+        gap: 1rem;
     }
 
     .hero__nav--xs li {
-        padding: 0.5rem 4rem;
         white-space: nowrap;
     }
 
@@ -1349,7 +1350,14 @@
     }
 
     .popup__image {
-        background-position: center;
+        background-image: none;
+        background-color: var(--secondary-color);
+        flex-basis: 20%;
+    }
+
+    .popup__form {
+        flex-basis: 80%;
+        justify-content: start;
     }
 
     .popup__close {
@@ -1425,7 +1433,7 @@
     }
 
     .header__actions--xs {
-        padding: 2rem 4rem;
+        padding: 1rem 4rem;
         border-top: 1px solid var(--third-color);
     }
 

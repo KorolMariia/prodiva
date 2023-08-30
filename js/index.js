@@ -231,15 +231,22 @@ headerClose.forEach(item => item.addEventListener('click', () => {
 }))
 
 // Popup
-const openPopup = document.querySelector('.js--open--modal');
+const openPopup = document.querySelectorAll('.js--open--modal');
 const popup = document.querySelector('.popup');
 
-openPopup.addEventListener('click', (event) => {
+openPopup.forEach(item => item.addEventListener('click', (event) => {
   event.stopPropagation();
   event.preventDefault();
   popup.classList.toggle('show');
   document.body.style.overflow = 'hidden';
-});
+}))
+
+// openPopup.addEventListener('click', (event) => {
+//   event.stopPropagation();
+//   event.preventDefault();
+//   popup.classList.toggle('show');
+//   document.body.style.overflow = 'hidden';
+// });
 
 // Close Popup
 const popupClose = document.querySelector('.popup__close');
@@ -255,4 +262,15 @@ document.addEventListener('click', (event) => {
     popup.classList.remove('show');
     document.body.style.overflow = '';
   }
+});
+
+const heroNav = document.querySelector('.hero__nav--xs');
+const headerList = document.querySelector('.header__list');
+
+heroNav.addEventListener('click', () => {
+  headerNav.style.display = 'none';
+});
+
+headerList.addEventListener('click', () => {
+  headerNav.style.display = 'none';
 });
