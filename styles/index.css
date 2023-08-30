@@ -1485,6 +1485,10 @@
         margin-bottom: 2rem;
     }
 
+    .header__close--img img {
+        margin-right: 0 !important;
+    }
+
     .header__list li {
         padding: 2.5rem 1rem;
     }

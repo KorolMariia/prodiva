@@ -19,11 +19,6 @@ const clearHideMenuTimeout = () => {
   clearTimeout(timeoutId);
 }
 
-// liHoverDropdown.addEventListener('mouseover', () => {
-//   headerItemDropdown.style.display = 'block';
-//   clearTimeout(timeoutId);
-// });
-
 liHoverDropdown.addEventListener('mouseleave', () => {
   headerItemDropdown.style.display = 'none';
 });
@@ -278,7 +273,7 @@ heroNav.addEventListener('click', () => {
 liItems.forEach(li => {
   const hasDropdownClass = li.classList.contains('js--hover--dropdown');
 
-  li.addEventListener('click', () => {
+  li.addEventListener('mouseover', () => {
     if (hasDropdownClass) {
       headerItemDropdown.style.display = 'block';
     } else {
