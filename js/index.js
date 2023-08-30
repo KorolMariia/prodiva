@@ -2,14 +2,14 @@
 let timeoutId;
 const headerProductsWrapper = document.querySelector('.header__products--wrapper');
 const headerNav = document.querySelector('.header__nav');
-const headerItems = document.querySelectorAll('.header__item');
+// const headerItems = document.querySelectorAll('.header__item');
 const liHoverDropdown = document.querySelector('.js--hover--dropdown');
 const headerItemDropdown = document.querySelector('.header__item--dropdown');
 
-headerItems.forEach(item => item.addEventListener('click', (event) => {
-  event.stopPropagation();
-  headerNav.style.display = 'none';
-}));
+// headerItems.forEach(item => item.addEventListener('click', (event) => {
+//   event.stopPropagation();
+//   headerNav.style.display = 'none';
+// }));
 
 const showHeaderNav = () => {
   headerNav.style.display = 'block';

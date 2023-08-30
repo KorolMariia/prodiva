@@ -1427,7 +1427,7 @@
     .header__cart--wrapper,
     .header__search--wrapper,
     .header__item--dropdown {
-        display: block;
+        display: none;
         flex-direction: column;
         position: fixed;
         margin: 0;
