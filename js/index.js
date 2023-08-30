@@ -280,4 +280,12 @@ liItems.forEach(li => {
       headerNav.style.display = 'none';
     }
   });
+
+  li.addEventListener('click', () => {
+    if (hasDropdownClass) {
+      headerItemDropdown.style.display = 'block';
+    } else {
+      headerNav.style.display = 'none';
+    }
+  });
 });
