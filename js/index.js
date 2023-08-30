@@ -3,6 +3,8 @@ let timeoutId;
 const headerProductsWrapper = document.querySelector('.header__products--wrapper');
 const headerNav = document.querySelector('.header__nav');
 const headerItems = document.querySelectorAll('.header__item');
+const liHoverDropdown = document.querySelector('.js--hover--dropdown');
+const headerItemDropdown = document.querySelector('.header__item--dropdown');
 
 headerItems.forEach(item => item.addEventListener('click', (event) => {
   event.stopPropagation();
@@ -22,6 +24,19 @@ const hideHeaderNav = () => {
 const clearHideMenuTimeout = () => {
   clearTimeout(timeoutId);
 }
+
+liHoverDropdown.addEventListener('mouseover', () => {
+  headerItemDropdown.style.display = 'block';
+  clearTimeout(timeoutId);
+});
+
+liHoverDropdown.addEventListener('mouseleave', () => {
+  headerItemDropdown.style.display = 'none';
+});
+
+headerItemDropdown.addEventListener('mouseover', () => {
+  clearTimeout(timeoutId);
+});
 
 headerProductsWrapper.addEventListener('mouseover', showHeaderNav);
 headerProductsWrapper.addEventListener('mouseleave', hideHeaderNav);
