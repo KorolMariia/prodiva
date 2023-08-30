@@ -11,7 +11,6 @@ headerItems.forEach(item => item.addEventListener('click', (event) => {
 
 const showHeaderNav = () => {
   headerNav.style.display = 'block';
-  document.body.style.overflow = 'hidden';
 }
 
 const hideHeaderNav = () => {
@@ -239,7 +238,6 @@ openPopup.forEach(item => item.addEventListener('click', (event) => {
   event.stopPropagation();
   event.preventDefault();
   popup.classList.toggle('show');
-  // document.body.style.overflow = 'scroll';
 }))
 
 // Close Popup
@@ -247,14 +245,12 @@ const popupClose = document.querySelector('.popup__close');
 
 popupClose.addEventListener('click', () => {
   popup.classList.remove('show');
-  document.body.style.overflow = '';
 });
 
 document.addEventListener('click', (event) => {
   const target = event.target;
   if (!target.closest('.popup__wrapper') && !target.closest('.popup_close') && !target.closest('.iti__country-list')) {
     popup.classList.remove('show');
-    document.body.style.overflow = '';
   }
 });
 
