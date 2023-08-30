@@ -2,14 +2,8 @@
 let timeoutId;
 const headerProductsWrapper = document.querySelector('.header__products--wrapper');
 const headerNav = document.querySelector('.header__nav');
-// const headerItems = document.querySelectorAll('.header__item');
 const liHoverDropdown = document.querySelector('.js--hover--dropdown');
 const headerItemDropdown = document.querySelector('.header__item--dropdown');
-
-// headerItems.forEach(item => item.addEventListener('click', (event) => {
-//   event.stopPropagation();
-//   headerNav.style.display = 'none';
-// }));
 
 const showHeaderNav = () => {
   headerNav.style.display = 'block';
@@ -25,14 +19,18 @@ const clearHideMenuTimeout = () => {
   clearTimeout(timeoutId);
 }
 
-liHoverDropdown.addEventListener('mouseover', () => {
-  headerItemDropdown.style.display = 'block';
-  clearTimeout(timeoutId);
-});
+// liHoverDropdown.addEventListener('mouseover', () => {
+//   headerItemDropdown.style.display = 'block';
+//   clearTimeout(timeoutId);
+// });
 
 liHoverDropdown.addEventListener('mouseleave', () => {
   headerItemDropdown.style.display = 'none';
 });
+
+liHoverDropdown.addEventListener('click', () => {
+  headerItemDropdown.style.display = 'block';
+})
 
 headerItemDropdown.addEventListener('mouseover', () => {
   clearTimeout(timeoutId);
@@ -107,7 +105,7 @@ headerCartList.addEventListener('mouseleave', hideCartList);
 
 
 // Languages select
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const selectedLanguage = document.querySelector(".header__selected-language");
   const languageOptions = document.querySelectorAll(".header__language-option");
   const languageMenu = document.querySelector(".header__language-options");
@@ -118,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
   selectedLanguage.textContent = "RU";
 
   languageOptions.forEach(option => {
-    option.addEventListener("click", function () {
+    option.addEventListener("click", () => {
       const selectedLang = this.getAttribute("data-lang");
       selectedLanguage.setAttribute("data-lang", selectedLang);
       selectedLanguage.textContent = selectedLang.toUpperCase();
@@ -136,11 +134,11 @@ document.addEventListener("DOMContentLoaded", function () {
       option.classList.add('active');
     }
   });
-  selectedLanguage.addEventListener("mouseover", function () {
+  selectedLanguage.addEventListener("mouseover", () => {
     languageMenu.style.display = "block";
     clearTimeout(menuTimer);
   });
-  selectedLanguage.addEventListener("mouseleave", function () {
+  selectedLanguage.addEventListener("mouseleave", () => {
     const delay = 500;
     clearTimeout(menuTimer);
     menuTimer = setTimeout(() => {
@@ -148,11 +146,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }, delay);
   });
 
-  languageMenu.addEventListener("mouseenter", function () {
+  languageMenu.addEventListener("mouseenter", () => {
     clearTimeout(menuTimer);
   });
 
-  languageMenu.addEventListener("mouseleave", function () {
+  languageMenu.addEventListener("mouseleave", () => {
     const delay = 500;
     clearTimeout(menuTimer);
     menuTimer = setTimeout(() => {
@@ -177,7 +175,7 @@ slideSwitchers.forEach((switcher, index) => {
       updateSliderPosition();
       updateActiveSwitcher();
     }
-    // startAutoSlide();
+    startAutoSlide();
   });
 });
 
@@ -204,7 +202,7 @@ const startAutoSlide = () => {
     updateActiveSwitcher();
   }, 5000);
 }
-// startAutoSlide();
+startAutoSlide();
 
 
 // Homecare slider
@@ -271,11 +269,20 @@ document.addEventListener('click', (event) => {
 
 const heroNav = document.querySelector('.hero__nav--xs');
 const headerList = document.querySelector('.header__list');
+const liItems = headerList.querySelectorAll('li');
 
 heroNav.addEventListener('click', () => {
   headerNav.style.display = 'none';
 });
 
-headerList.addEventListener('click', () => {
-  headerNav.style.display = 'none';
+liItems.forEach(li => {
+  const hasDropdownClass = li.classList.contains('js--hover--dropdown');
+
+  li.addEventListener('click', () => {
+    if (hasDropdownClass) {
+      headerItemDropdown.style.display = 'block';
+    } else {
+      headerNav.style.display = 'none';
+    }
+  });
 });
