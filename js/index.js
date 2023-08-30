@@ -11,6 +11,7 @@ headerItems.forEach(item => item.addEventListener('click', (event) => {
 
 const showHeaderNav = () => {
   headerNav.style.display = 'block';
+  document.body.style.overflow = 'hidden';
 }
 
 const hideHeaderNav = () => {
@@ -238,15 +239,8 @@ openPopup.forEach(item => item.addEventListener('click', (event) => {
   event.stopPropagation();
   event.preventDefault();
   popup.classList.toggle('show');
-  document.body.style.overflow = 'hidden';
+  // document.body.style.overflow = 'scroll';
 }))
-
-// openPopup.addEventListener('click', (event) => {
-//   event.stopPropagation();
-//   event.preventDefault();
-//   popup.classList.toggle('show');
-//   document.body.style.overflow = 'hidden';
-// });
 
 // Close Popup
 const popupClose = document.querySelector('.popup__close');
